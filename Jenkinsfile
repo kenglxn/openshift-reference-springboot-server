@@ -7,6 +7,7 @@ def config = [
     javaVersion                : 11,
     jiraFiksetIKomponentversjon: true,
     chatRoom                   : "#aos-notifications",
+    compileProperties          : "-U",
     versionStrategy            : [
         [branch: 'master', versionHint: '3'],
         [branch: 'release/v2', versionHint: '2'],
