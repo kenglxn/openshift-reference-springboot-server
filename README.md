@@ -291,9 +291,19 @@ It is recommended to take a look at the productivity features of spring boot dev
 Developement tools are activated via a profile. In order to always activate the profile when building locally add the following to your
 `~/.m2/settings.xml`
 
-    <activeProfiles>
-       <activeProfile>devtools</activeProfile>
-   	</activeProfiles>
+    <...>
+		<profile>
+			<id>enable-devtools</id>
+			<properties>
+				<springBootDevtools>true</springBootDevtools>
+			</properties>
+		</profile>
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>enable-devtools</activeProfile>
+	</activeProfiles>
+</settings>
 
 In Jenkins this will be disabled so that all Leveransepakke that is built on Jenkins will not have devtools included. If
 you want to have jenkins in a snapshot build use the development flow and build it locally. Or conditionally add the `devtools`
