@@ -370,6 +370,12 @@
 
   <profiles>
     <profile>
+      <activation>
+        <property>
+          <name>springBootDevtools</name>
+          <value>true</value>
+        </property>
+      </activation>
       <id>devtools</id>
       <dependencies>
         <dependency>
