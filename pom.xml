@@ -49,6 +49,8 @@
     <!-- Project specific Nexus staging profileID. Must be changed by project -->
     <!--<staging-profile-id-med-clm>specify-your-own</staging-profile-id-med-clm>-->
     <ojdbc8.version>12.2.0.1</ojdbc8.version>
+
+    <argLine>--illegal-access=permit</argLine>
   </properties>
 
   <distributionManagement>
@@ -111,22 +113,6 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <argLine>
-            --illegal-access=warn
-          </argLine>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <configuration>
-          <argLine>
-            --illegal-access=warn
-          </argLine>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
